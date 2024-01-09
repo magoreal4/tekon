@@ -1,0 +1,41 @@
+
+
+{% extends "base.html" %}
+{% load static svg %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static './leaflet/leaflet.css' %}" />
+<link rel="stylesheet" href="{% static './leaflet/MarkerCluster.css' %}" />
+<link rel="stylesheet" href="{% static './leaflet/MarkerCluster.Default.css' %}" />
+{% endblock css %}
+
+{% block body_class %}{% endblock %}
+
+{% block header %}
+    {% include "header.html" %}
+{% endblock header %}
+    
+{% block content %}
+    <!-- Mapa -->
+    <div id="map" class="h-screen max-w-full">
+    </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script type="text/javascript">
+	var auth = "{{request.user.is_authenticated}}";
+	var static_url = "{% get_static_prefix %}";
+	var csrft = "{{ csrf_token }}";
+	var debug = "{{ debug }}";
+	auth == 'True' ? auth = true : auth = false;
+	debug == 'True' ? debug = true : debug = false;
+	var sitios = {{ sitios|safe }};
+
+  </script>
+
+
+<script type="text/javascript" src="{% static './js/mapa.js' %}"></script>
+
+{% endblock extra_js %}

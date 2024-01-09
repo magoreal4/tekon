@@ -1,0 +1,30 @@
+# pytz==2023.3  # https://github.com/stub42/pytz (Maneja zonas horarias)
+# python-slugify==8.0.1  # https://github.com/un33k/python-slugify (genera los slugs)
+# Pillow==9.5.0  # https://github.com/python-pillow/Pillow
+# whitenoise==6.4.0  # https://github.com/evansd/whitenoise (desplegar archivos estaticos)
+
+# Wagtail
+# ------------------------------------------------------------------------------
+wagtail>=5.2,<5.3  # https://github.com/wagtail/wagtail
+django-tailwind==3.6.0  # https://github.com/jazzband/django-tailwind
+wagtail-metadata==5.0.0 # https://github.com/neon-jungle/wagtail-metadata 
+
+# Django
+# ------------------------------------------------------------------------------
+Django>=4.2,<4.3
+django-environ==0.11.2 # https://django-environ.readthedocs.org
+django-redis==5.4.0 # https://github.com/jazzband/django-redis
+
+# Others
+# ------------------------------------------------------------------------------
+wagtailsvg==0.0.37 # https://github.com/Aleksi44/wagtailsvg
+django-inline-svg==0.1.1 # https://github.com/mixxorz/django-inline-svg
+wagtail-modeladmin==1.0.0 
+
+wagtail-django-recaptcha==1.0 # http://github.com/springload/wagtail-django-recaptcha
+django-crispy-forms==2.1 
+crispy-tailwind==0.5.0 # https://github.com/django-crispy-forms/crispy-tailwind
+captcha==0.5.0
+wagtail-django-simple-captcha==1.0
+
+django-import-export==3.3.4

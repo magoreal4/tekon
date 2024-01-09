@@ -1,0 +1,15 @@
+<!-- templates/admin/pdf_upload.html -->
+{% extends "admin/base_site.html" %}
+{% block content %}
+<h1>Upload PDF Files</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+        <label>Select PDF files:</label>
+        <input type="file" name="files" multiple>
+    </div>
+    <div>
+        <button type="submit">Upload Files</button>
+    </div>
+</form>
+{% endblock %}
